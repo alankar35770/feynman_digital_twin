@@ -4,7 +4,7 @@ This is a Digital Twin of Richard Feynman built using RAG, Gemini 2.5 Flash, FAI
 
 The idea is simple: instead of asking a general chatbot physics questions, I wanted to create something that answers using Feynman's own lecture material and tries to explain concepts in a way similar to how he taught them.
 
-The system retrieves relevant chunks from Feynman's lectures, sends them along with conversation history to Gemini, and generates a response in a Feynman-inspired style.
+The system retrieves relevant chunks from Feynman's lectures, sends them along with conversation history to Gemini, and generates a response in a Feynman inspired style.
 
 ## What it can do
 
