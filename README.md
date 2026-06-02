@@ -18,13 +18,11 @@ The system retrieves relevant chunks from Feynman's lectures, sends them along w
 ## Dataset
 
 The knowledge base was built primarily from:
-
-* Richard Feynman's lectures from https://www.feynmanlectures.caltech.edu/
-* Additional supporting material such as quotes and biographical information
+Richard Feynman's lectures from https://www.feynmanlectures.caltech.edu/
 
 The lecture text was collected and combined into a corpus before chunking and embedding.
 
-## How it works
+## Simple Architectural design 
 
 1. Load the lecture corpus.
 2. Split the text into chunks.
@@ -102,6 +100,7 @@ The file is loaded again when the notebook starts.
 * Add source citations with direct references.
 * Add speech input and voice output.
 * Build a web interface instead of using a notebook.
+* Adding additional supporting material such as quotes and biographical information
 
 ## Example Questions
 
