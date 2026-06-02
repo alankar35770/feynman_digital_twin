@@ -9,7 +9,7 @@ The system retrieves relevant chunks from Feynman's lectures, sends them along w
 ## What it can do
 
 * Answer physics questions using retrieved Feynman lecture content
-* Maintain a Feynman-like teaching style
+* Maintain a Feynman like teaching style
 * Remember previous messages during a conversation
 * Save conversations and reload them later
 * Show which chunks were retrieved for a response
