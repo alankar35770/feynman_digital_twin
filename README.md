@@ -22,7 +22,7 @@ Richard Feynman's lectures from https://www.feynmanlectures.caltech.edu/
 
 The lecture text was collected and combined into a corpus before chunking and embedding.
 
-## Simple Architectural design 
+## Data Flow
 
 1. Load the lecture corpus.
 2. Split the text into chunks.
