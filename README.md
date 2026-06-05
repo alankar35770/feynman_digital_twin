@@ -1,4 +1,4 @@
-Richard Feynman Digital Twin
+# Richard Feynman Digital Twin
 This is a Digital Twin of Richard Feynman built using RAG, Gemini 2.5 Flash, FAISS, and a Gradio web interface with a built-in memory dashboard.
 The idea is the same as before: instead of asking a general chatbot physics questions, I wanted to create something that answers using Feynman's own lecture material and tries to explain concepts the way he actually taught them. What's new this time is the Gradio interface, which makes the whole thing feel much more like a real application rather than a notebook you run cell by cell.
 What it can do
