@@ -12,7 +12,7 @@ Display full conversation history in a live memory dashboard tab
 Reset the conversation and start fresh at any time
 Run as an interactive Gradio chat application with a browser UI
 
-Dataset
+## Dataset
 The knowledge base was built primarily from Richard Feynman's lectures available at https://www.feynmanlectures.caltech.edu/
 The lecture text was collected and combined into a single corpus before chunking and embedding. The corpus covers topics ranging from conservation laws and quantum mechanics to the nature of probability and the structure of atoms.
 Data Flow
@@ -27,7 +27,8 @@ Send the full prompt to Gemini 2.5 Flash and return the response.
 Save the conversation turn to memory so follow-up questions work properly.
 
 Memory is stored in a JSON file on Google Drive so it survives notebook restarts.
-Installation
+
+## Installation
 Install the required packages:
 pip install sentence-transformers
 pip install faiss-cpu
@@ -48,7 +49,8 @@ The app launches with two tabs. The Chat tab is the main interface where you tal
 To launch the app:
 pythondemo.launch(share=True, debug=True)
 This will give you a public shareable link that works outside of Colab.
-Files
+
+## Files
 Typical files generated during execution:
 feynman_corpus.txt
 feynman_chunks.pkl
@@ -64,16 +66,16 @@ Gradio Interface
 The app is built with Gradio Blocks and has two tabs.
 The Chat tab wraps the ask_feynman function in a ChatInterface component. Each response includes the answer from Gemini followed by the source chunk IDs that were retrieved to generate it.
 The Memory Dashboard tab shows a Pandas DataFrame of all conversation turns with turn number, user message, and a preview of the assistant response. Clicking the Refresh Memory button reloads the table with the latest turns.
-Known Issues
 
+## Known Issues
 Retrieval quality depends heavily on how much lecture material is in the corpus. Thin coverage on a topic means weaker answers.
 Follow-up questions sometimes retrieve chunks that are relevant to the topic in general but not to the specific follow-up.
 The personality is entirely prompt-based, so it captures Feynman's enthusiasm and analogies but is not a precise simulation.
 The corpus was assembled manually from lecture text, so there are occasional formatting inconsistencies in how equations and figures are represented.
 Gemini 2.5 Flash occasionally returns a 503 when servers are under heavy load. The fix is just to retry the cell.
+Long term meory not working the way it should work.
 
-Future Improvements
-
+## Future Improvements
 Add more lecture chapters, transcripts, and biographical material to improve coverage.
 Improve retrieval quality with a reranking step after the initial FAISS search.
 Add inline source citations that link directly to specific lecture chapters.
@@ -81,8 +83,7 @@ Add speech input and voice output so you can actually have a conversation out lo
 Move the whole thing to a proper web app instead of a Colab notebook.
 Improve follow-up handling by injecting the previous question into the retrieval query rather than just the new message.
 
-Example Questions
-
+## Example Questions
 What is probability?
 Explain entropy.
 What is energy?
