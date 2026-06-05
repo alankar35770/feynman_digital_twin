@@ -1,24 +1,24 @@
 # Richard Feynman Digital Twin
 This is a Digital Twin of Richard Feynman built using RAG, Gemini 2.5 Flash, FAISS, and a Gradio web interface with a built-in memory dashboard.
 The idea is the same as before: instead of asking a general chatbot physics questions, I wanted to create something that answers using Feynman's own lecture material and tries to explain concepts the way he actually taught them. What's new this time is the Gradio interface, which makes the whole thing feel much more like a real application rather than a notebook you run cell by cell.
-What it can do
 
-Answer physics questions using retrieved Feynman lecture content
-Maintain a Feynman-like teaching style throughout the conversation
-Remember previous messages during a session using short-term memory
-Persist conversations across notebook restarts using a JSON memory file
-Show which text chunks were retrieved for any given response
-Display full conversation history in a live memory dashboard tab
-Reset the conversation and start fresh at any time
-Run as an interactive Gradio chat application with a browser UI
+## What it can do
+1. Answer physics questions using retrieved Feynman lecture content
+2. Maintain a Feynman-like teaching style throughout the conversation
+3. Remember previous messages during a session using short-term memory
+4. Persist conversations across notebook restarts using a JSON memory file
+5. Show which text chunks were retrieved for any given response
+6. Display full conversation history in a live memory dashboard tab
+7. Reset the conversation and start fresh at any time
+8. Run as an interactive Gradio chat application with a browser UI
 
 ## Dataset
 The knowledge base was built primarily from Richard Feynman's lectures available at https://www.feynmanlectures.caltech.edu/
 The lecture text was collected and combined into a single corpus before chunking and embedding. The corpus covers topics ranging from conservation laws and quantum mechanics to the nature of probability and the structure of atoms.
-Data Flow
 
-Load the lecture corpus from Google Drive.
-Split the text into overlapping chunks using LangChain's text splitter.
+## Data Flow
+1. Load the lecture corpus from Google Drive.
+2. Split the text into overlapping chunks using LangChain's text splitter.
 Generate embeddings for each chunk using BAAI/bge-small-en-v1.5.
 Store all embeddings in a FAISS index for fast similarity search.
 At query time, retrieve the top k most relevant chunks for the user's question.
